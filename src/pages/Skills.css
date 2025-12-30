@@ -1,0 +1,154 @@
+/* Page */
+.skills-page {
+  padding: 90px 20px;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Title */
+.skills-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f8fafc;
+}
+
+.skills-intro {
+  max-width: 820px;
+  margin: 0 auto 70px;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #cbd5f5;
+}
+
+/* Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 36px;
+}
+
+/* Card */
+.skills-card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  padding: 34px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+/* Entrance animation */
+.skills-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover card */
+.skills-card:hover {
+  transform: translateY(-10px);
+  border-color: #38bdf8;
+  box-shadow: 0 22px 40px rgba(56, 189, 248, 0.15);
+}
+
+/* Card title */
+.skills-card h3 {
+  font-size: 1.45rem;
+  margin-bottom: 26px;
+  color: #38bdf8;
+}
+
+/* Skill row */
+.skill-row {
+  margin-bottom: 22px;
+  padding: 6px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+/* Row hover */
+.skills-card:hover .skill-row:hover {
+  background: rgba(56, 189, 248, 0.05);
+}
+
+/* Header */
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: #e2e8f0;
+}
+
+/* Bar */
+.skill-bar {
+  height: 9px;
+  background: #1e293b;
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Progress */
+.skill-progress {
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #22d3ee,
+    #38bdf8
+  );
+  background-size: 200% 100%;
+  transition: width 1.4s ease;
+  animation: none;
+}
+
+/* Progress animation on hover */
+.skills-card:hover .skill-progress {
+  animation: shimmer 2s linear infinite;
+}
+
+/* Footer */
+.skills-footer {
+  margin-top: 90px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Keyframes */
+@keyframes shimmer {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 2.4rem;
+  }
+
+  .skills-card {
+    padding: 28px;
+  }
+}
